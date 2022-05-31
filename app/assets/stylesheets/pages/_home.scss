@@ -2,7 +2,8 @@
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  row-gap: 24px;
+  column-gap: 20px;
 }
 
 .card-category {
