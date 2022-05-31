@@ -1,0 +1,18 @@
+// background {
+//   color: rgba($color: #000000, $alpha: 0.6);
+// }
+
+body {
+  border-radius: 15px;
+  align-self: auto;
+  position: relative;
+}
+
+button {
+  background-color: $our-purple;
+  color: white;
+  border-radius: 35%;
+    &:hover {
+      background-color: #69224c;
+    }
+}
