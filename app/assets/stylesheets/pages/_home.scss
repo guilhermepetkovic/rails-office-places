@@ -10,8 +10,9 @@
   background-position: center;
   height: 180px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: end;
+  padding-left: 10px;
   color: white;
   font-size: 24px;
   font-weight: bold;
@@ -20,6 +21,14 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
+.card-price {
+  font-weight: lighter;
+  font-size: 20px;
+}
+
+.container{
+  margin-top: 60px;
+}
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
