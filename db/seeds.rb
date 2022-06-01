@@ -25,7 +25,9 @@ User.destroy_all
     name: Faker::Company.name,
     address: "#{Faker::Address.street_address}, #{Faker::Address.city}",
     price: Faker::Number.between(from: 50, to: 200),
-    user: user
+    user: user,
+    rating: Faker::Number.within(range: 1..5),
+    description: Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)
     )
   place.save
 end
