@@ -1,1 +1,16 @@
-<h1> Show View </h1>
+<div class="container">
+  <div class="place">
+      <div class="place-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+      </div>
+  </div>
+    <div class="text">
+      <span class="place-name"><%= @place.name %></span><br>
+      <span class="place-description"><%= @place.description %></span>
+    </div>
+    <div class="rent-info">
+      <span class="place-rating"><%= @place.rating %>⭐</span>
+      <span class="place-rating"> Owner: <%= @place.user.email %></span><br>
+      <span class="place-price"><%= @place.price %>$ /night </span>
+      <button type="button" class="btn btn-primary">Rent</button>
+    </div>
+</div>
