@@ -24,7 +24,7 @@ User.destroy_all
   place = Place.new(
     name: Faker::Company.name,
     address: "#{Faker::Address.street_address}, #{Faker::Address.city}",
-    price: Faker::Number.between(from: 50, to: 200),
+    price: Faker::Number.between(from: 50, to: 200).to_i,
     user: user,
     rating: Faker::Number.within(range: 1..5),
     description: Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)
