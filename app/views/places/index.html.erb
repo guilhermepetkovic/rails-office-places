@@ -2,10 +2,10 @@
   <div class="cards">
     <% @places.each do |place| %>
       <%= link_to show_path(place) do %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/mirand/image/upload/v1654109713/office%20spaces/the-office_deiiy6.jpg)">
           <div>
             <span class="card-name"><%= place.name %></span><br>
-            <span class="card-price"><%= place.price %> $ /night</span>
+            <span class="card-price"><%= place.price %> $ /day</span>
           </div>
         </div>
       <% end %>
