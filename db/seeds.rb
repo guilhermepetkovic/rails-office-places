@@ -21,13 +21,13 @@ User.destroy_all
     password: Faker::Alphanumeric.alphanumeric(number: 10)
   )
   user.save
-    place = Place.new(
-      name: Faker::Company.name,
-      address: "#{Faker::Address.street_address}, #{Faker::Address.city}",
-      price: Faker::Number.between(from: 50, to: 200),
-      user: user
+  place = Place.new(
+    name: Faker::Company.name,
+    address: "#{Faker::Address.street_address}, #{Faker::Address.city}",
+    price: Faker::Number.between(from: 50, to: 200),
+    user: user
     )
-    place.save
+  place.save
 end
 
 # user.save
@@ -41,12 +41,12 @@ end
 # )
 # place01.save
 
-9.times do
-  place = Place.new(
-    name: Faker::Company.name,
-    address: "#{Faker::Address.street_address}, #{Faker::Address.city}",
-    price: Faker::Number.between(from: 50, to: 200),
-    user: @user
-  )
-  place.save
-end
+# 9.times do
+#   place = Place.new(
+#     name: Faker::Company.name,
+#     address: "#{Faker::Address.street_address}, #{Faker::Address.city}",
+#     price: Faker::Number.between(from: 50, to: 200),
+#     user: @user
+#   )
+#   place.save
+# end
