@@ -8,9 +8,13 @@ class PlacesController < ApplicationController
   end
 
   def create
-    @place = Place.new(places_params)
-    @place.save
-    redirect_to place_path(@place)
+    @place = Place.new(place_params)
+    @place.user = current_user
+    if @place.save
+      redirect_to place_path(@place), notice: "Office place successfully added"
+    else
+      render :new
+    end
   end
 
   def show
@@ -19,7 +23,7 @@ class PlacesController < ApplicationController
 
   private
 
-  def places_params
-    params.require(:place).permit(:price, :address, :size, :name, :description, :rating)
+  def place_params
+    params.require(:place).permit(:name, :address, :price, :description)
   end
 end
